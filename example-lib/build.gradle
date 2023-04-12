@@ -37,10 +37,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
 
-                // Replace with your own group ID.
                 groupId 'com.example'
-
-                // Replace with the name of your library
                 artifactId 'example-lib'
                 version '1.0.0'
             }
@@ -49,9 +46,6 @@ afterEvaluate {
         repositories {
             maven {
                 name = "GitHubPackages"
-
-                // Replace GITHUB_USERID with your personal or organisation user ID and
-                // REPOSITORY with the name of the repository on GitHub
                 url = uri("https://maven.pkg.github.com/szaboa/android-lib-github-packages")
 
                 credentials {
@@ -64,7 +58,6 @@ afterEvaluate {
 }
 
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     testImplementation 'junit:junit:4.13.2'
