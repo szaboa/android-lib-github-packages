@@ -25,7 +25,7 @@ jobs:
         run: bash ./gradlew :example-lib:publish
         env:
           GPR_USER: ${{ github.actor }}
-          GPR_KEY: ${{ secrets.GITHUB_TOKEN }}
+          GPR_KEY: ${{ secrets.PAT_TOKEN }}
           
       - name: Create Release ✅
         id: create_release
