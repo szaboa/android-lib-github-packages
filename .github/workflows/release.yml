@@ -22,7 +22,7 @@ jobs:
         run: ./gradlew :example-lib:assemble
         
       - name: Publish to GitHub Package Registry 🚀
-        run: bash ./gradlew :simplelibrary:publish
+        run: bash ./gradlew :example-lib:publish
         env:
           GPR_USER: ${{ github.actor }}
           GPR_KEY: ${{ secrets.GITHUB_TOKEN }}
