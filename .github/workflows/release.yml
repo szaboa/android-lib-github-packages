@@ -21,7 +21,6 @@ jobs:
       - name: Build AAR ⚙️🛠
         run: ./gradlew :example-lib:assemble
         
-        
       - name: Publish to GitHub Package Registry 🚀
         run: bash ./gradlew :simplelibrary:publish
         env:
