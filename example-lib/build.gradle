@@ -49,9 +49,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
-def githubProperties = new Properties()
-githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
-
 afterEvaluate {
     publishing {
         publications {
@@ -70,8 +67,8 @@ afterEvaluate {
                 url = uri("https://maven.pkg.github.com/szaboa/android-lib-github-packages")
 
                 credentials {
-                    username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
-                    password = githubProperties['gpr.key'] ?: System.getenv("GPR_KEY")
+                    username = System.getenv("GPR_USER")
+                    password = System.getenv("GPR_KEY")
                 }
             }
         }
