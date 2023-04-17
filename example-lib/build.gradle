@@ -4,13 +4,13 @@ plugins {
 }
 
 ext {
-    groupId = "com.example"
-    artifactId = "example-lib"
-    versionCode = 10001
-    versionName = "0.0.1"
+    _groupId = "com.example"
+    _artifactId = "example-lib"
+    _versionCode = 10002
+    _versionName = "0.0.2"
 
-    libraryName = "ExampleLib"
-    libraryDescription = "Example Library for simple things!"
+    _libraryName = "ExampleLib"
+    _libraryDescription = "Example Library for simple things!"
 }
 
 android {
@@ -22,8 +22,8 @@ android {
         minSdk 24
         targetSdk 33
 
-        versionCode versionCode
-        versionName versionName
+        versionCode _versionCode
+        versionName _versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -55,9 +55,9 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
 
-                groupId groupId
-                artifactId artifactId
-                version versionName
+                groupId _groupId
+                artifactId _artifactId
+                version _versionName
             }
         }
 
